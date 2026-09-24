@@ -9,12 +9,12 @@ void GetTypeSizes(void){
     std::cout<<"Size of a boolean:"<<sizeof(bool)<<std::endl;
     std::cout<<"Size of Double:"<<sizeof(double)<<std::endl;
     std::cout<<"Size of Long (Int):"<<sizeof(long)<<std::endl;
+    std::cout<<"Size of Long Long:"<<sizeof(long long)<<std::endl;
     std::cout<<"Size of Long Double:"<<sizeof(long double)<<std::endl;
     //std::cout<<"Size of Long void:"<<sizeof(void)<<std::endl; <-- this is not possible since it can not be a variable type
     std::cout<<"Size of Short (int):"<<sizeof(short)<<std::endl<<std::endl;
     //std::cout<<"Size of Unsinged Long "<<sizeof(unsingned long)<<std::endl; <-- Not Possible since unsingned long (unsigned word) is not a type
     std::cout<<"===================================End===================================================\n";
-
 }
 // Jus some basic computation exercise
 void exercise1(void){

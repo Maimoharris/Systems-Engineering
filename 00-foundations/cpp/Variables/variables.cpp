@@ -8,6 +8,7 @@ int main() {
     char gender;
     float gpa;
     bool currently_enrolled=false;
+    std::size_t sizeoflonglong= sizeof(long long);
 
     //Collect Data
     std::cout<<"===============Student Personal Information Collection==============="<<std::endl;
