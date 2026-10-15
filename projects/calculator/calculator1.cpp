@@ -8,8 +8,15 @@ int main(void){
     std::string input;
     std::cout<<">";
     std::getline(std::cin,input);   
-    std::vector<float> values;
+    std::vector<int> values;
     std::vector<char> operators;
+    int result = values[0];
+
+    if(input[0]=='-'){
+        int result = -values[0];
+        input[0]=' ';
+    }
+
     for(char &c : input){
         if(c =='+'||c=='/'||c=='*'||c=='-'){
             operators.push_back(c);
@@ -20,36 +27,26 @@ int main(void){
     //std::cout<<operators.size();
 
     std::stringstream clean_input(input);
-    float token;
-    while (clean_input>>token)
-    {
-       // std::cout<<token<<"\n";
+    int token;
+    while (clean_input>>token){
+        std::cout<<token<<"\n";
         values.push_back(token);
     }
-    values.push_back(0);
-    double result = values[0];
-    for(int i=0; i<operators.size();i++){
-        switch (operators[i])
+    
+    for(int i=1; i<values.size(); i++){
+        switch (operators[i-1])
         {
             case '+':
-                result+=values[i+1];
+                result+=values[i];
                 break;
             case '-':
-                result+=values[i+1];
+                result+=values[i];
                 break;
             case '*':
-                result*=values[i+1];
+                result*=values[i];
                 break;
             case '/':
-                try
-                {
-                    result/=values[i+1];
-                }
-                catch(const std::exception& e)
-                {
-                    std::cerr << e.what() << '\n';
-                }
-                
+                result/=values[i];
                 break;
             
             default:
