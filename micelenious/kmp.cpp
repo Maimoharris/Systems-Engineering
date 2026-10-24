@@ -6,13 +6,6 @@ string ltrim(const string &);
 string rtrim(const string &);
 vector<string> split(const string &);
 
-/*
- * Complete the 'kmp' function below.
- *
- * The function is expected to return a STRING.
- * The function accepts INTEGER_ARRAY x as parameter.
- */
-
 string kmp(vector<int> x) {
     int unique_chars = 0;
     int total_len = 0;
